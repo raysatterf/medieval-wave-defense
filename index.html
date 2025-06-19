@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medieval Tower Defense</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Medieval Tower Defense</h1>
+    </header>
+
+    <main>
+        <div id="game-container">
+            <canvas id="game-canvas" width="800" height="600"></canvas>
+        </div>
+
+        <aside id="controls-panel">
+            <section id="resource-display">
+                <h2>Gold: <span id="gold-amount">100</span></h2>
+                <h2>Lives: <span id="lives-amount">20</span></h2> <!-- New line for lives -->
+            </section>
+
+            <section id="tower-selection">
+                <h3>Towers</h3>
+                <button id="buy-archer-tower" class="tower-button" data-tower-type="archer">Archer Tower (50G)</button>
+                <button id="buy-mage-tower" class="tower-button" data-tower-type="mage">Mage Tower (75G)</button>
+            </section>
+
+            <section id="message-log">
+                <h3>Log</h3>
+                <ul id="log-list">
+                    <li>Game Started!</li>
+                </ul>
+            </section>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Medieval Tower Defense</p>
+    </footer>
+
+    <script src="game.js"></script>
+</body>
+</html>

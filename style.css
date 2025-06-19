@@ -1,0 +1,108 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex: 1;
+    padding: 1em;
+    gap: 1em;
+}
+
+#game-container {
+    flex-grow: 3; /* Game takes more space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#game-canvas {
+    border: 2px solid #555;
+    background-color: #fff;
+}
+
+#controls-panel {
+    flex-grow: 1; /* Controls take less space */
+    background-color: #ddd;
+    padding: 1em;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#resource-display, #tower-selection, #message-log {
+    background-color: #eee;
+    padding: 0.5em;
+    border-radius: 3px;
+}
+
+#tower-selection button {
+    display: block;
+    margin: 0.5em 0;
+    padding: 0.5em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#tower-selection button:hover {
+    background-color: #45a049;
+}
+
+#log-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: 150px;
+    overflow-y: auto;
+    font-size: 0.9em;
+}
+
+#log-list li {
+    padding: 0.2em 0;
+    border-bottom: 1px solid #ccc;
+}
+
+#log-list li:last-child {
+    border-bottom: none;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 0.5em 0;
+    font-size: 0.8em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    #game-container, #controls-panel {
+        width: 100%;
+    }
+    #game-canvas {
+        width: 100%;
+        max-width: 800px; /* Ensure canvas doesn't get too large on smaller screens but scales down */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
